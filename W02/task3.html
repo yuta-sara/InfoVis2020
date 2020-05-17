@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>W02: Task03</title>
+    </head>
+
+    <body>
+        v0 : <input id = "v0_x"/><input id = "v0_y"/><input id = "v0_z"/><br />
+        v1 : <input id = "v1_x"/><input id = "v1_y"/><input id = "v1_z"/><br />
+        v2 : <input id = "v2_x"/><input id = "v2_y"/><input id = "v2_z"/><br />
+        Calc : <button onclick="calc()">計算</button>
+        <p id = "S"></p>
+
+        <script src="vec3.js"></script>
+        <script>
+        function calc()
+        {
+            var x0 = document.getElementById("v0_x").value;
+            var y0 = document.getElementById("v0_y").value;
+            var z0 = document.getElementById("v0_z").value;
+            var x1 = document.getElementById("v1_x").value;
+            var y1 = document.getElementById("v1_y").value;
+            var z1 = document.getElementById("v1_z").value;
+            var x2 = document.getElementById("v2_x").value;
+            var y2 = document.getElementById("v2_y").value;
+            var z2 = document.getElementById("v2_z").value;
+
+
+            var v0 = new Vec3(x0,y0,z0);
+            var v1 = new Vec3(x1,y1,z1);
+            var v2 = new Vec3(x2,y2,z2);
+
+            var S = v0.AreaOfTriangle(v1,v2);
+
+            document.getElementById("S").textContent = "面積 : " + S;
+        }
+        </script>
+
+    </body>
+</html>

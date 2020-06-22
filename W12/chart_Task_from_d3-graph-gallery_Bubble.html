@@ -8,7 +8,8 @@
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
 
-x=user,y=sales,z=share
+各ソフトの使用者数と売り上げ、および普及率を表す。<br />
+x軸:ユーザ数,y軸:売り上げ,z:普及率
 
 
 <script>
@@ -28,7 +29,7 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("Example.csv", function(data) {
+d3.csv("https://yuta-sara.github.io/InfoVis2020/W12/Example.csv", function(data) {
 
   // Add X axis
   var x = d3.scaleLinear()
